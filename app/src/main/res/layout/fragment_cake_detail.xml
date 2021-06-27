@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CakeDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgDetailCake"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="#FFB8B8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_3">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCategoryDetailCake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/custom_round_button"
+                android:backgroundTint="#edeaf5"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:text="Sweet"
+                android:textColor="#c2afde"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtNameDetailCake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dooonut"
+                android:textColor="#434247"
+                android:textSize="30dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtCategoryDetailCake"
+                app:layout_constraintTop_toBottomOf="@+id/txtCategoryDetailCake">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtPriceDetailCake"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_round_button"
+                android:gravity="center"
+                android:paddingTop="17dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="17dp"
+                android:text="$19"
+                android:textColor="#393535"
+                android:textSize="20dp"
+                android:translationX="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtDetailDescCake"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="5dp"
+        android:text="Preheat oven to 350 F. Cook 12- to 15-cup Burnt pan with baking spray."
+        android:textColor="#aaa9af"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailDescCake"
+        app:layout_constraintVertical_bias="1.0"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="30dp"
+            android:backgroundTint="#f7f9fb">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_size_cake_selector"
+                        android:textColor="@drawable/text_size_cake_color"
+                        android:layout_margin="10dp"
+                        android:checked="true">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_size_cake_selector"
+                        android:textColor="@drawable/text_size_cake_color"
+                        android:layout_margin="10dp">
+
+                    </RadioButton>
+
+                    <RadioButton
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="L"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_size_cake_selector"
+                        android:textColor="@drawable/text_size_cake_color"
+                        android:layout_margin="10dp">
+
+                    </RadioButton>
+
+                </RadioGroup>
+
+                <com.ornach.nobobutton.NoboButton
+                    android:id="@+id/btnDecreaseAmountDetail"
+                    android:layout_margin="10dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:nb_backgroundColor="#FFFFFF"
+                    app:nb_focusColor="#B83CC3"
+                    app:nb_radius="999dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    app:nb_drawableResource="@drawable/ic_minus"/>
+
+                <TextView
+                    android:id="@+id/txtAmountDetailCake"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="01"
+                    android:textColor="#424146"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <com.ornach.nobobutton.NoboButton
+                    android:id="@+id/btnIncreaseAmountDetail"
+                    android:layout_margin="10dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:nb_backgroundColor="#FFFFFF"
+                    app:nb_focusColor="#B83CC3"
+                    app:nb_textColor="#FFF"
+                    app:nb_radius="999dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    app:nb_drawableResource="@drawable/ic_add_cart_black"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.ornach.nobobutton.NoboButton
+            android:id="@+id/btnAddCartDetail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#3a2755"
+            app:nb_fontIcon=""
+            android:padding="10dp"
+            app:nb_iconSize="10dp"
+            app:nb_text="Add cart"
+            app:nb_textColor="@color/white"
+            app:nb_textSize="15dp">
+
+        </com.ornach.nobobutton.NoboButton>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

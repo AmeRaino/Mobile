@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.afinal.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cakeDetailFragment"
+            app:destination="@id/cakeDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cakeListFragment"
+            app:destination="@id/cakeListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentContinueShopping"
+            app:destination="@id/fragmentContinueShopping" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentOrderHistory"
+            app:destination="@id/fragmentOrderHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/cakeDetailFragment"
+        android:name="com.example.afinal.CakeDetailFragment"
+        android:label="cake_detail"
+        tools:layout="@layout/fragment_cake_detail" />
+    <fragment
+        android:id="@+id/cakeListFragment"
+        android:name="com.example.afinal.CakeListFragment"
+        android:label="fragment_cake_list"
+        tools:layout="@layout/fragment_cake_list" >
+        <action
+            android:id="@+id/action_cakeListFragment_to_cakeDetailFragment"
+            app:destination="@id/cakeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.afinal.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_fragmentShippingAddress"
+            app:destination="@id/fragmentShippingAddress" />
+        <action
+            android:id="@+id/action_cartFragment_to_fragmentContinueShopping"
+            app:destination="@id/fragmentContinueShopping" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.afinal.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentShippingAddress"
+        android:name="com.example.afinal.FragmentShippingAddress"
+        android:label="fragment_shipping_address"
+        tools:layout="@layout/fragment_shipping_address" >
+        <action
+            android:id="@+id/action_fragmentShippingAddress_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentContinueShopping"
+        android:name="com.example.afinal.FragmentContinueShopping"
+        android:label="fragment_continue_shopping"
+        tools:layout="@layout/fragment_continue_shopping" >
+        <action
+            android:id="@+id/action_fragmentContinueShopping_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOrderHistory"
+        android:name="com.example.afinal.FragmentOrderHistory"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" />
+</navigation>
